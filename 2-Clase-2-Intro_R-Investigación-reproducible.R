@@ -41,9 +41,30 @@
 # Git-add: Límite de 100 megas por archivo
 #          Haciendo click en el chechbox del archivo
 #          en la pestaña Git
+#
+##################################
+# REPRODUCIBILIDAD EN R
+##################################
+#
+# Una carpeta
+# 1. Datos crudos (cvs, slx,json, html)
+# 2. Código y texto (Rmd, Rpres, shiny)
+# 3. Resultados (Manuscrito, página web, etc)
+#
+# https://derek-corcoran-barrios.github.io/Clase2/Clase2InvestigacionReproducible#25
+#
+# LOS CHUNKS
+# Son como códigos R, Bash, Pyton, SQL, Satt, otros 
+# insertados dentro de la página web que está creado
+# con R Markdown
+
 
 library(tidyverse)
 library(knitr)
 library(kableExtra)
 
-file.choose()
+plants <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv")
+actions <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/actions.csv")
+threats <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/threats.csv")
+
+
